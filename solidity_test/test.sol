@@ -24,7 +24,18 @@ contract TEST1 {
     Student s1;
     Student[] students;
     //학생 추가 기능
-    function setStudent (string memory _name, uint _number, uint _score, string memory _grade) public {
+    function setStudent (string memory _name, uint _number, uint _score) public {
+        string memory _grade;
+
+        if (_score >= 90) {
+            _grade = "A";
+        } else if(_score >= 80){
+            _grade = "B";
+        } else if(_score >= 70) {
+            _grade = "C";
+        } else {
+            _grade = "F";
+        }
         s1 = Student(_name, _number, _score, _grade);
         students.push(s1);
     }

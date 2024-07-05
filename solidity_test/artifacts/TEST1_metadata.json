@@ -97,11 +97,6 @@
 						"internalType": "uint256",
 						"name": "_score",
 						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "_grade",
-						"type": "string"
 					}
 				],
 				"name": "setStudent",
@@ -138,11 +133,11 @@
 	},
 	"sources": {
 		"test.sol": {
-			"keccak256": "0xeb732bbbc96876571f3cdf3a793269eb20803c87960b2b406808aaf4982d88bf",
+			"keccak256": "0x620615be63ebd875b26bfbba742cab7eb1de79d1ed24376c4178a3e8566bba86",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f29d8a54fe29fd6a982177e518807ef90bcf0c78c3975fe2ef7b011f0888a0f7",
-				"dweb:/ipfs/QmUZYJU3mD7nhMGkJUBWUCWghsTrB1uxxcmr3ztLXnUx1i"
+				"bzz-raw://efbac557d262b6663a7055e626a1a4a9a66c99e570d8d7dec3acf521a0448d95",
+				"dweb:/ipfs/QmXqYPW849Bs4kqaXL9VtBPXq7UphnTS9mqq3ekcMEsN5p"
 			]
 		}
 	},
