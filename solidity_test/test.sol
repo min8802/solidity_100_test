@@ -84,13 +84,12 @@ Alice, 1, 85 Bob,2, 75 Charlie,3,60 Dwayne, 4, 90 Ellen,5,65 Fitz,6,50 Garret,7,
         string grade;
         string[] classes;
     }
-
+    Student[] students;
     mapping(string => Student) s1;
 
     //학생 추가 기능
-    function setStudent (string memory _name, uint _number, uint _score, string memory _class) public {
+    function setStudent (string memory _name, uint _score, string[] memory _class) public {
         string memory _grade;
-
         if (_score >= 90) {
             _grade = "A";
         } else if(_score >= 80){
@@ -102,8 +101,77 @@ Alice, 1, 85 Bob,2, 75 Charlie,3,60 Dwayne, 4, 90 Ellen,5,65 Fitz,6,50 Garret,7,
         } else {
             _grade = "F";
         }
-        s1[_name] = Student(_name, _number, _score, _grade, _class);
+        s1[_name] = Student(_name, students.length+1, _score, _grade, _class);
+        students.push(s1[_name]);
+    }
+
+    
+    // 학생 조회 기능(1) - 특정 학생의 번호를 입력하면 그 학생 전체 정보를 반환
+    function getStudentNumber(uint _number) public view returns(Student memory) {
+        return students[_number-1];
+    }
+
+    // 학생 조회 기능(2) - 특정 학생의 이름을 입력하면 그 학생 전체 정보를 반환
+    function getStudentName(string memory _name) public view returns(Student memory) {
+        return s1[_name];
+    }
+
+    //학생 점수 조회 기능 - 특정 학생의 이름을 입력하면 그 학생의 점수를 반환
+    function getStudentScore(string memory _name) public view returns(uint) {
+        Student memory student = s1[_name];
+        uint score = student.score;
+        return score;
+    }
+
+    //학생 전체 숫자 조회 기능 - 현재 등록된 학생들의 숫자를 반환
+    function getAllStudentNumber() public view returns(uint) {
+        return students.length;
+    }
+
+    //학생 전체 정보 조회 기능 - 현재 등록된 모든 학생들의 정보를 반환
+    function getAllStudent() public view returns(Student[] memory) {
+        return students;
+    }
+
+    //학생들의 전체 평균 점수 계산 기능 - 학생들의 전체 평균 점수를 반환
+    function getStudentAvgScore() public view returns(uint) {
+        uint result;
+        for (uint i = 0; students.length > i; i++) {
+            result += students[i].score;
+        }
+        return result / students.length;
+    }
+
+    //선생 지도 자격 자가 평가 시스템 - 학생들의 평균 점수가 70점 이상이면 true, 아니면 false를 반환    
+    function getTeacherState() public view returns(bool) {
+        uint avg;
+        avg = getStudentAvgScore();
+        if (avg >= 70) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
+    //보충반 조회 기능 - F 학점을 받은 학생들의 숫자와 그 전체 정보를 반환
+
+    //아래 getStudentScoreF함수를 실행하면 에러가 나는데 왜 에러가 나는지 잘 모르겠습니다..
+    //어느 부분을 수정해야 할지 코드 확인 한번 부탁드립니다
+
+    function getStudentScoreF() public view returns(uint, Student[] memory) {
+        uint studentNumber = 0;
+        Student memory studentScoreF;
+        Student[] memory studentsScoreF;
+        for (uint i=0; students.length > i; i++) {
+            if(students[i].score < 60) {
+                studentScoreF = students[i];
+                studentsScoreF[studentNumber] = studentScoreF;
+                studentNumber += 1; 
+            } else {
+                studentNumber += 0;
+            }
+        }
+        return (studentNumber, studentsScoreF);
     }
 }
-// struct 안에 있는 classes 배열에 값을 채우려고 시도했는데 잘안되어서 진행을 못했습니다..
-// 답안 나오면 다시 풀어보고 Mapping에 대해서 다시 복습하겠습니다.

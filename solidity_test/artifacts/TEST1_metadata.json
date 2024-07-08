@@ -118,7 +118,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test.sol": "TEST1"
+			"solidity_test/test.sol": "TEST1"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -132,12 +132,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"test.sol": {
-			"keccak256": "0x620615be63ebd875b26bfbba742cab7eb1de79d1ed24376c4178a3e8566bba86",
+		"solidity_test/test.sol": {
+			"keccak256": "0xea024edd91bf49ed9c25d0037e4e7e75814a1ac2b0c64f07d3123ca8f53705f0",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://efbac557d262b6663a7055e626a1a4a9a66c99e570d8d7dec3acf521a0448d95",
-				"dweb:/ipfs/QmXqYPW849Bs4kqaXL9VtBPXq7UphnTS9mqq3ekcMEsN5p"
+				"bzz-raw://88b136d5850681f0e0751b5a13e26184fa4c3af6f545c0c5c62fa723bdc2b0fc",
+				"dweb:/ipfs/QmZmuimeLT6ePVDEnfFbyhQ5SRodbhHpGSBDLySBJSvv5Z"
 			]
 		}
 	},
