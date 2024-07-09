@@ -6,14 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "getStudent",
+				"inputs": [],
+				"name": "getAllStudent",
 				"outputs": [
 					{
 						"components": [
@@ -36,6 +30,83 @@
 								"internalType": "string",
 								"name": "grade",
 								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "classes",
+								"type": "string[]"
+							}
+						],
+						"internalType": "struct TEST1.Student[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllStudentNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStudentAvgScore",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getStudentName",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "grade",
+								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "classes",
+								"type": "string[]"
 							}
 						],
 						"internalType": "struct TEST1.Student",
@@ -47,8 +118,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getStudents",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					}
+				],
+				"name": "getStudentNumber",
 				"outputs": [
 					{
 						"components": [
@@ -71,6 +148,135 @@
 								"internalType": "string",
 								"name": "grade",
 								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "classes",
+								"type": "string[]"
+							}
+						],
+						"internalType": "struct TEST1.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getStudentScore",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStudentScoreF",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "grade",
+								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "classes",
+								"type": "string[]"
+							}
+						],
+						"internalType": "struct TEST1.Student[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTeacherState",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pushStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sClass",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "grade",
+								"type": "string"
+							},
+							{
+								"internalType": "string[]",
+								"name": "classes",
+								"type": "string[]"
 							}
 						],
 						"internalType": "struct TEST1.Student[]",
@@ -90,13 +296,13 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_number",
+						"name": "_score",
 						"type": "uint256"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_score",
-						"type": "uint256"
+						"internalType": "string[]",
+						"name": "_class",
+						"type": "string[]"
 					}
 				],
 				"name": "setStudent",
@@ -118,7 +324,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test.sol": "TEST1"
+			"solidity_test/test1.sol": "TEST1"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -132,12 +338,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test.sol": {
-			"keccak256": "0xbd3eec716c45859d600fa79772de3706525b0f39c95c43027ae545c7c2eb6f07",
+		"solidity_test/test1.sol": {
+			"keccak256": "0x8acfb851635cc3b2f42136781c3ea3813cd8be7c27640d9e63ce13b4019f3ec8",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://89c1629579813b27871feb5c0646a7edc552e5adc864414960a69e3a70859c59",
-				"dweb:/ipfs/QmWUjvr1q2YzUvCqL44S5aRMfbPfzmhXAZxSRkonm59Y4x"
+				"bzz-raw://eaf7bf5f011206b7fb09945ec65e5849ed46a4482c93ce6b6d78b73940eecfca",
+				"dweb:/ipfs/QmYW7v4RDwLGxzLyHs2m8PVoRTCXXBSG8cfsSWKB5n3W52"
 			]
 		}
 	},

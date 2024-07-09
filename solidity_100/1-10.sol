@@ -165,6 +165,10 @@ contract Q9 {
     function stringToBytes(string memory _a) public pure returns(bytes memory) {
         return bytes(_a);
     }
+
+    function bytesToString(bytes memory _b) public pure returns(string memory) {
+        return string(_b);
+    }
 }
 
 contract Q10 {
