@@ -6,6 +6,36 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"name": "getLowestScoreStudent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct TEST3.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -18,27 +48,22 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
 								"internalType": "string",
 								"name": "name",
 								"type": "string"
 							},
 							{
 								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
 								"name": "score",
 								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "grade",
-								"type": "string"
 							}
 						],
-						"internalType": "struct TEST1.Student",
+						"internalType": "struct TEST3.Student",
 						"name": "",
 						"type": "tuple"
 					}
@@ -53,29 +78,42 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
 								"internalType": "string",
 								"name": "name",
 								"type": "string"
 							},
 							{
 								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
 								"name": "score",
 								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "grade",
-								"type": "string"
 							}
 						],
-						"internalType": "struct TEST1.Student[]",
+						"internalType": "struct TEST3.Student[]",
 						"name": "",
 						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalScoreAndAvg",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -87,11 +125,6 @@
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_number",
-						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -118,7 +151,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test.sol": "TEST1"
+			"solidity_test/test.sol": "TEST3"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
