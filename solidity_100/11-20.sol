@@ -63,12 +63,9 @@ contract Q14 {
     }
 
     Student[] students;
-
-    uint public i = 1;
     
     function setStudent(string memory _name, string memory _class) public {
-        students.push(Student(i, _name, _class));
-        i++;
+        students.push(Student(students.length + 1, _name, _class));
     }
 
     function getStudent() public view returns(Student[] memory) {

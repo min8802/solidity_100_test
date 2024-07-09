@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.26+commit.8a97fa7a"
+		"version": "0.8.25+commit.b61c2a91"
 	},
 	"language": "Solidity",
 	"output": {
@@ -30,19 +30,6 @@
 						"internalType": "struct Q14.Student[]",
 						"name": "",
 						"type": "tuple[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "i",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -95,11 +82,11 @@
 	},
 	"sources": {
 		"solidity_100/11-20.sol": {
-			"keccak256": "0xf6a915deb92895f852e90dfa5489d7d19e05fbb695bedc02f26e7119d1ea0178",
+			"keccak256": "0x6106ea60e6ed8db9f3e2dcebaead1cfb7d6a5dc0b6623630f5d9086e7af4a8ab",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://56bf56186a3401287b6eea69447da82b2292a4addbb516f65c0c71c13dedac93",
-				"dweb:/ipfs/QmZH3wZkaMTcfyLUKesKivJHDegoBY53g16ShkuEXDhVRf"
+				"bzz-raw://a2eb0287d27ef10420877a033a9c9b5487c7c86a6d6f19abf9852f034d317b3a",
+				"dweb:/ipfs/QmWurPP2S5FBUfZ4qjZhDnWbRRuBKnCKjQe4PAWmTHYzSW"
 			]
 		}
 	},
