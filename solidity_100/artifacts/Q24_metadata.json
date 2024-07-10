@@ -6,29 +6,22 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getEvenArray",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_a",
+						"type": "string"
 					}
 				],
-				"name": "setEvenNumber",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "returnBool",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -45,7 +38,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/21-30.sol": "Q11"
+			"solidity_100/21-30.sol": "Q24"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -60,11 +53,11 @@
 	},
 	"sources": {
 		"solidity_100/21-30.sol": {
-			"keccak256": "0x17b09220a8b1601235efb5ed309c98325416d4f6e929451fd75bf1a40e5c4870",
+			"keccak256": "0x192edf7b0c3ea3a49e2c416669b2d24343f9d43108b7d3172fb90b89db1c714a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://ef63674d99ede8f587033b695df60fe3d7f4b24d79525d631ec1dba94957b158",
-				"dweb:/ipfs/QmUbWYGMUooroAVhuT5uzucpi6R9Yx1B2xEjXv59sT8mkh"
+				"bzz-raw://8dee802e286951647a99282bdab0d443b87087c5b09c0aeb69692c863518f0b9",
+				"dweb:/ipfs/QmRQsRaBMkTRCz1C6qDTorJDjCasMbykFaiBBeVwb1vG38"
 			]
 		}
 	},
