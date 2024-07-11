@@ -6,114 +6,42 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getLowestScoreStudent",
-				"outputs": [
+				"inputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "score",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct TEST3.Student",
-						"name": "",
-						"type": "tuple"
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_pw",
+						"type": "string"
 					}
 				],
-				"stateMutability": "view",
+				"name": "deleteUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
 					}
 				],
-				"name": "getStudent",
+				"name": "getUser",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "score",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct TEST3.Student",
+						"internalType": "bytes32",
 						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getStudents",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "score",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct TEST3.Student[]",
-						"name": "",
-						"type": "tuple[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getTotalScoreAndAvg",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "bytes32"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -123,16 +51,40 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_name",
+						"name": "_id",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "_score",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_pw",
+						"type": "string"
 					}
 				],
-				"name": "setStudent",
+				"name": "isLogin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_pw",
+						"type": "string"
+					}
+				],
+				"name": "signUp",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -151,7 +103,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test1.sol": "TEST3"
+			"solidity_test/test3.sol": "TEST3"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -165,12 +117,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test1.sol": {
-			"keccak256": "0xe8b7400c6f0a19f26add211ce0f1e319ed95b6c9fddc629f8f4ab0297622ca4f",
+		"solidity_test/test3.sol": {
+			"keccak256": "0x1069ce4e549de5311ffeba32fcdcd9c41cfe71826da73b564f3a9883d3bc47df",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://58b0a2d0df1adfd877998b46be54fa44b240f4ac2a3591c10a2d5bcfa35239d8",
-				"dweb:/ipfs/QmbfwhqKZ5b7vLLpSxYBfYVZU5Ao9opKerm1dBUvkKb955"
+				"bzz-raw://87084098e263f108b4d8c38793a768500fb38dcebdf9fdf1c40aa669ceebde4c",
+				"dweb:/ipfs/QmNxjeyFnQNUb2NxW4J4Tx7bzsJ4QR82ga6ygqk3SRNWSZ"
 			]
 		}
 	},
