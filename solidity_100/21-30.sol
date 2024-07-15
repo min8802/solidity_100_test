@@ -80,7 +80,7 @@ contract Q25 {
     uint[] A;
     function autoPushNumber(uint _n) public returns(uint[] memory) {
         for(uint i = 0; i < _n+1; i++) {
-            A.push(i);
+            A.push(_n-i);
         }
         return A;
     }
@@ -157,10 +157,17 @@ contract Q30 {
     //9, 7, 6, 3, 1   4넣으려면
     //처음에 4를 끝에 붙이고 전체 a를 내림차순 정렬하기
     
-    uint[] a;
 
-    function descending(uint _n) public returns(uint[] memory){
-        a.push(_n);
+    function descending(uint[] memory _arr, uint _n) public pure returns(uint[] memory){
+        
+        uint[] memory a = new uint[](_arr.length +1);
+        for(uint i = 0; i < _arr.length; i++) {
+            a[i] = _arr[i];
+        }
+        
+        a[_arr.length] = _n;
+        
+        
         for (uint i = 0; i < a.length; i++) {
             for (uint j = i+1; j < a.length; j++) {
                 if(a[i] < a[j]) {
@@ -169,5 +176,6 @@ contract Q30 {
             }
         }
         return a;
-    }        
+    }
+            
 }

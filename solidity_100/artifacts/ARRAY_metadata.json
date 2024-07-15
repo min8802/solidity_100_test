@@ -9,21 +9,16 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_a",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_b",
+						"name": "_n",
 						"type": "uint256"
 					}
 				],
-				"name": "sub",
+				"name": "setArray",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint256[4]",
 						"name": "",
-						"type": "uint256"
+						"type": "uint256[4]"
 					}
 				],
 				"stateMutability": "pure",
@@ -43,7 +38,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/21-30.sol": "Q22"
+			"solidity_100/21-30.sol": "ARRAY"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -58,11 +53,11 @@
 	},
 	"sources": {
 		"solidity_100/21-30.sol": {
-			"keccak256": "0x4707b378e81e62cc54cdfdebfaabf66dd9ccb17f8f145a94cc3b39cbfba2ac86",
+			"keccak256": "0x9198524061853f6cd9376a2a4a70aed76c6cae0bf655a70ec18bf9bc958c09f9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://e8b537d41452d214561f2ad1d4df3d961fe0c77bc774cb2119e84aa86a98da74",
-				"dweb:/ipfs/QmfESLYux3gKSh65gwZBBhGFpc6p99qzFVQnYfYiGt9FYd"
+				"bzz-raw://6c0257174ab4f1201565658bdd1ab383770e08a459bc2185701884c46616320d",
+				"dweb:/ipfs/QmQ5wMQZky7SLvPEDcE87rCQbvEs3qLw8WTb558zjFjWVE"
 			]
 		}
 	},

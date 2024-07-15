@@ -6,6 +6,19 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "ChangePw",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -16,9 +29,14 @@
 						"internalType": "string",
 						"name": "_pw",
 						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isPassed",
+						"type": "bool"
 					}
 				],
-				"name": "deleteUser",
+				"name": "deleteAccount",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -29,22 +47,22 @@
 						"internalType": "string",
 						"name": "_id",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_pw",
+						"type": "string"
 					}
 				],
-				"name": "getUser",
+				"name": "getHash",
 				"outputs": [
 					{
 						"internalType": "bytes32",
 						"name": "",
 						"type": "bytes32"
-					},
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -58,9 +76,14 @@
 						"internalType": "string",
 						"name": "_pw",
 						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isPassed",
+						"type": "bool"
 					}
 				],
-				"name": "isLogin",
+				"name": "signIn",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -103,7 +126,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test3.sol": "TEST3"
+			"solidity_test/test3.sol": "TEST3Answer"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

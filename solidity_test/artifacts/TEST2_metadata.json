@@ -4,7 +4,140 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getLowestScoreStudent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct TEST2.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					}
+				],
+				"name": "getStudent",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct TEST2.Student",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getStudents",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "score",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct TEST2.Student[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalScoreAndAvg",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_score",
+						"type": "uint256"
+					}
+				],
+				"name": "setStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -18,7 +151,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test3.sol": "TEST2"
+			"solidity_test/test2.sol": "TEST2"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,12 +165,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test3.sol": {
-			"keccak256": "0x04e4766a0350a8a40754724ca7986548a61d9225fd8b107b288a3f537308dddd",
+		"solidity_test/test2.sol": {
+			"keccak256": "0x8c9d4f487e56eca9752edcd250a2bccd4128cabc7adfe75682c5658e347ad104",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3b2409e397ea7cf15d7a3ca8f8b689b6b836db5e1c3aca089e3de1baba15092e",
-				"dweb:/ipfs/Qmb4Ua4r7xed2UoRoViY19WBmcN9YsEpoDamWzjQF7Y1ia"
+				"bzz-raw://c20220168157e04caf5e1f84727cee50bdd9e349032407711e5dbcdeb487c958",
+				"dweb:/ipfs/QmdnrBLEQEsRSM77F5EWTCtHncVKjKPPqVHSb2UdUnmrda"
 			]
 		}
 	},

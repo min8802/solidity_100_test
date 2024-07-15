@@ -20,12 +20,31 @@
 			},
 			{
 				"inputs": [],
-				"name": "get",
+				"name": "getRoom",
 				"outputs": [
 					{
 						"internalType": "uint256[4]",
 						"name": "",
 						"type": "uint256[4]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "getScore",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -98,7 +117,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test4.sol": "A"
+			"solidity_test/test4.sol": "A"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -112,12 +131,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"test4.sol": {
-			"keccak256": "0xa5459228337d16f9159aaca6a4b15f760471caa78dfca75d4163e57a6ff67b68",
+		"solidity_test/test4.sol": {
+			"keccak256": "0xcd3d028422ab9174105bc6a3f64d1f31b322d1fefadf5941b8354af5cb301f67",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4f64a30c774e238673e3743d43bc6a6f428baea8cfccdb1e5fd7ccd4bda6ca47",
-				"dweb:/ipfs/QmfR7tPSxQ5axjG2ae3nBZhmE6V3Xm8T2GRHvu3VvVEfts"
+				"bzz-raw://3b81340e16801647ee8fc90e58923cdd9c7ec1d165fba5a5484c63c1653aa156",
+				"dweb:/ipfs/QmaFcsZzPLKcg21LbFyWoaxGzXwPw3CeUJ5w6iXP8mojaT"
 			]
 		}
 	},
