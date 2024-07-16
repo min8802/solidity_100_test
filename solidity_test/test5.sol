@@ -12,18 +12,9 @@ contract A {
     */
 
     function convertTime(uint _n) public pure returns(string memory) {
-        uint div;
-        uint second;
-        uint minute;
-        uint hour;
-        
-        if(_n < 60) {
-            second = _n % 60;
-        } else if (_n >= 60 && _n < 3600) {
-            minute = _n % 3600;
-        } else {
-            hour = _n / 3600;
-        }
+        uint hour = _n / 3600;
+        uint minute = (_n % 3600) / 60;
+        uint second = _n % 60;
         
         return "0";
     }
