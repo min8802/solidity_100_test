@@ -6,101 +6,22 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "deposit",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getRoom",
-				"outputs": [
-					{
-						"internalType": "uint256[4]",
-						"name": "",
-						"type": "uint256[4]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					}
-				],
-				"name": "getScore",
-				"outputs": [
-					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_n",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getUser",
+				"name": "convertTime",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "address",
-								"name": "wallet",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "balance",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "score",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct A.User[]",
-						"name": "",
-						"type": "tuple[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "string",
-						"name": "_name",
+						"name": "",
 						"type": "string"
 					}
 				],
-				"name": "setUser",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -117,7 +38,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test4.sol": "A"
+			"solidity_test/test5.sol": "A"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -131,12 +52,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test4.sol": {
-			"keccak256": "0xcd3d028422ab9174105bc6a3f64d1f31b322d1fefadf5941b8354af5cb301f67",
+		"solidity_test/test5.sol": {
+			"keccak256": "0x68b07287452601e670f1bc41735e7442b41a43455fccbf9037bf8bef0f2f6e8a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3b81340e16801647ee8fc90e58923cdd9c7ec1d165fba5a5484c63c1653aa156",
-				"dweb:/ipfs/QmaFcsZzPLKcg21LbFyWoaxGzXwPw3CeUJ5w6iXP8mojaT"
+				"bzz-raw://6838be4cc146f0a7e0692775b26430fb19601e1d30b885df406dd97a62a7ff0c",
+				"dweb:/ipfs/QmSzSLMh7BLz7E4gr2VScDmvWXoT2Am42Uwz7HJiC9gpx5"
 			]
 		}
 	},
