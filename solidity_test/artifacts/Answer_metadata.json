@@ -184,7 +184,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test4.sol": "Answer"
+			"solidity_test/test4.sol": "Answer"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -198,7 +198,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"test4.sol": {
+		"solidity_test/test4.sol": {
 			"keccak256": "0xa0668ac7a2ced57f69ab4e3accb4a380e302f88c2ffe616fa98d133b56d72881",
 			"license": "GPL-3.0",
 			"urls": [

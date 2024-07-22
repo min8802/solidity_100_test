@@ -57,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test6.sol": "a"
+			"solidity_test/test6.sol": "a"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -95,7 +95,7 @@
 				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
 			]
 		},
-		"test6.sol": {
+		"solidity_test/test6.sol": {
 			"keccak256": "0xde1d73106255b5fc801540868e004bf5d1c172203ca5c4f585104c20bc463240",
 			"license": "GPL-3.0",
 			"urls": [

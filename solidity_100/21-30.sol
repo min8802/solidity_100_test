@@ -8,6 +8,7 @@ contract Q21 {
     */
     
     function localArray3(uint _n) public pure returns(uint[1] memory) {
+        // uint[] memory local = new uint[](_n);
         uint[1] memory local;
         if(_n % 3 == 0) {
             local[0] = _n;
