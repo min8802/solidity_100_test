@@ -8,9 +8,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_topicNum",
+						"type": "uint256"
 					}
 				],
 				"name": "getTopic",
@@ -51,6 +51,51 @@
 						"internalType": "struct a.topic",
 						"name": "",
 						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTopics",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "subject",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "content",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "proposer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "upvote",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "downvote",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct a.topic[]",
+						"name": "",
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -121,6 +166,11 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_topicNum",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
 						"name": "_subject",
 						"type": "string"
@@ -165,11 +215,11 @@
 	},
 	"sources": {
 		"solidity_test/test8.sol": {
-			"keccak256": "0x03689879df1c26400919eaae9cec60b9362935222925986a1505445b4fd0205c",
+			"keccak256": "0x31a8d69ce1e2be375a06f16d3cdfd5263a9a99c23ea2077fb54cbf419e17daee",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://03d96fad9ec1ec0f1a136066883535bfb02c50b4390743f692c2c889fc919318",
-				"dweb:/ipfs/QmQYBJ2h6g3xA9QQjRpJrfL8RMvUaushwDJzzSyuNcwB5g"
+				"bzz-raw://cf04afcb21a083ca90dfc7c0720487ef11078fc353741b59ef0ff4e10394ead4",
+				"dweb:/ipfs/QmZw38ZVny1P3cCkgt8de1n846mRcrkMetdrn91dYMNXPU"
 			]
 		}
 	},
