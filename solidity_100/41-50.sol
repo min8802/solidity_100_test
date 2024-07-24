@@ -72,7 +72,7 @@ contract Q43 {
     }
 
     function withDraw() public payable {
-        require(wallet[msg.sender] != 0, "No money in this contract");
+        require(wallet[msg.sender] != 0 , "No money in this contract");
         payable(msg.sender).transfer(wallet[msg.sender]);
         wallet[msg.sender] -= wallet[msg.sender];
     }

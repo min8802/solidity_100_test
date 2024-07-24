@@ -70,11 +70,10 @@ contract Q34 {
     }
 
     student[] students;
-    uint studentNumber = 1;
 
-    function setStudent(string memory _name, uint _score) public {
-        students.push(student(_name, studentNumber,_score));
-        studentNumber++;
+    function setStudent(string memory _name, uint _score) public returns(student[] memory){
+        students.push(student(_name, students.length+1,_score));
+        return students;
     }
 
     function getAvg() public view returns(uint) {
@@ -93,26 +92,44 @@ contract Q35 {
     예) [1,2,3,4,5,6] -> [2,4,6] // [3,5,7,9,11,13] -> [5,9,13]
     */
 
-    function evenArray(uint[] memory _Array) public pure returns(uint[] memory){
+    function evenArray(uint[] memory _Array) public pure returns(uint[] memory) {
         uint idx;
         uint inputArray = _Array.length;
         uint ArrayNumber;
-        for(uint i=0;i<inputArray;i++) {
-            if(_Array[i] % 2 == 0) {
+        for(uint i=1;i<inputArray;i+=2) {
                 ArrayNumber++;
-            }
+        }
+        
+        uint[] memory Array = new uint[](ArrayNumber);
+
+        for(uint i=1;i<inputArray;i+=2) {
+            Array[idx] = _Array[i];
+            idx++;
         }
 
-        uint[] memory Array = new uint[](ArrayNumber);
-        
-        for(uint i=0;i<inputArray;i++) {
-            if(_Array[i] % 2 == 0) {
-                Array[idx] = _Array[i];
-                idx++;
-            }
-        }
         return Array;
     }
+    // function evenArray(uint[] memory _Array) public pure returns(uint[] memory){
+    //     uint idx;
+    //     uint inputArray = _Array.length;
+    //     uint ArrayNumber;
+    //     for(uint i=0;i<inputArray;i++) {
+    //         if(_Array[i] % 2 == 0) {
+    //             ArrayNumber++;
+    //         }
+    //     }
+
+    //     uint[] memory Array = new uint[](ArrayNumber);
+        
+    //     for(uint i=0;i<inputArray;i++) {
+    //         if(_Array[i] % 2 == 0) {
+    //             Array[idx] = _Array[i];
+    //             idx++;
+    //         }
+    //     }
+    //     return Array;
+    // }
+
 }
 
 contract Q36 {

@@ -8,20 +8,39 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_a",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
 					}
 				],
-				"name": "checkString",
+				"name": "localArray3",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256[1]",
 						"name": "",
-						"type": "bool"
+						"type": "uint256[1]"
 					}
 				],
 				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					}
+				],
+				"name": "stateArray3",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -38,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/31-40.sol": "Q21"
+			"solidity_100/21-30.sol": "Q21"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -52,12 +71,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_100/31-40.sol": {
-			"keccak256": "0xbab9b95d6fb0e145ed5d357fbbd868f943f73538d002b9f9500b0c22bc4cd528",
+		"solidity_100/21-30.sol": {
+			"keccak256": "0xfc83ff7c15c5aa2119b663f3b25bb44539f11289776ea370523ddd49aaa10c11",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://fc76e7a514e2f3e9bb33b9b62626bf311d85c2397807d807685e0821a2348c25",
-				"dweb:/ipfs/QmfCDXHjbeCCSkbhYCfwJ2bibQ7ixjSbXtAdX7guui1TRW"
+				"bzz-raw://678398f7b37dccb4d1e6f563b7ee504f44e3ca288178d9822e49c4868f473116",
+				"dweb:/ipfs/QmWfCrQhYpzypspKLwdydjpTcMwyLbzevXuamVgEEm7zHC"
 			]
 		}
 	},

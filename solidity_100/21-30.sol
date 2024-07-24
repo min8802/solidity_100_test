@@ -112,7 +112,7 @@ contract Q27 {
     해당 mapping에 정보를 넣고, 지우고 불러오는 함수도 같이 구현하세요.
     */
     mapping(string => bytes32) m1;
-    address a;
+  
     function setM1(string memory _a, bytes32 _b) public {
         m1[_a] = _b;
     }
