@@ -176,17 +176,17 @@ contract Q37 {
 
     function donate1wei() public payable{
         require(msg.value==1,"input value is 1wei");
-            msg.value;
+            
     }
     
     function donate1finney() public payable{
         require(msg.value==10**15,"input value is 1finney");
-            msg.value;
+           
     }
     
     function donate1ether() public payable{
         require(msg.value==10**18,"input value is 1ether");
-            msg.value;
+            
     }
 }
 
