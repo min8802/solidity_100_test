@@ -8,182 +8,49 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_topicNum",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_pw",
+						"type": "string"
 					}
 				],
-				"name": "getTopic",
+				"name": "generatePW",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "subject",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "content",
-								"type": "string"
-							},
-							{
-								"internalType": "address",
-								"name": "proposer",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "upvote",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "downvote",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct a.topic",
+						"internalType": "bool",
 						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getTopics",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "subject",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "content",
-								"type": "string"
-							},
-							{
-								"internalType": "address",
-								"name": "proposer",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "upvote",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "downvote",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct a.topic[]",
-						"name": "",
-						"type": "tuple[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "getUser",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "string",
-								"name": "name",
-								"type": "string"
-							},
-							{
-								"internalType": "address",
-								"name": "wallet",
-								"type": "address"
-							}
-						],
-						"internalType": "struct a.user",
-						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_subject",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_content",
-						"type": "string"
-					}
-				],
-				"name": "setTopic",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "setUser",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_topicNum",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "_subject",
-						"type": "string"
+						"type": "bool"
 					},
 					{
 						"internalType": "bool",
-						"name": "_vote",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
 						"type": "bool"
 					}
 				],
-				"name": "voting",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "_b",
+						"type": "bytes"
+					}
+				],
+				"name": "splitBytes",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -200,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test8.sol": "a"
+			"solidity_test/test9.sol": "a"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -214,12 +81,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test8.sol": {
-			"keccak256": "0x31a8d69ce1e2be375a06f16d3cdfd5263a9a99c23ea2077fb54cbf419e17daee",
+		"solidity_test/test9.sol": {
+			"keccak256": "0xccc183ad315d031023ab6d41dbeb3d6337d5c92a41086e047cd9c9d91a62bb33",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cf04afcb21a083ca90dfc7c0720487ef11078fc353741b59ef0ff4e10394ead4",
-				"dweb:/ipfs/QmZw38ZVny1P3cCkgt8de1n846mRcrkMetdrn91dYMNXPU"
+				"bzz-raw://9a93b043858a0ab42e6998ebac4c702e81c02c7fae86c2c4c4fcc20008e1f613",
+				"dweb:/ipfs/QmRVjpAFFUKuXWivYQriyXFhotS7TMApQED1kd2csqmP2w"
 			]
 		}
 	},
