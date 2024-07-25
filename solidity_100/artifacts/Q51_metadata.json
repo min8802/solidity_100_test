@@ -4,7 +4,21 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					}
+				],
+				"name": "setArray",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +47,11 @@
 	},
 	"sources": {
 		"solidity_100/51-60.sol": {
-			"keccak256": "0x04e3382ace1bf4c99634547c1d87a93b49df12473bdc24d586aa834da95c08fe",
+			"keccak256": "0xf146bfe98686b5f35593483eae29b5b95fa0d75c35bd6735743dcfca5c79d580",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c475f170eeb7e57db883068b524087ef4ac7f2e85968b10c248ea764eed48404",
-				"dweb:/ipfs/QmQStKJiyLGPiX4ds3qHqRXeYymASNGMj8xWDnEScuKvn2"
+				"bzz-raw://565e7c094454b089518f03772ce974af8233ce6a1cfb0b8c71d5fe6361ca67f9",
+				"dweb:/ipfs/QmcSLAp3LvAxBtZN3PrnXXqhjASFXeobLjSmpAvNVCfpfd"
 			]
 		}
 	},

@@ -28,6 +28,12 @@ contract Q41 {
     function initArray() public {
         delete numArray;
     }
+    
+    uint idx;
+    function pushNumber(uint _n) public {
+        numArray[idx++] = _n;
+    }
+    //이게 훨씬 쉽고 깔끔
 }
 
 contract Q42 {
@@ -71,10 +77,11 @@ contract Q43 {
         return wallet[msg.sender];
     }
 
-    function withDraw() public payable {
+    function withDraw(uint _n) public payable {
+        require(wallet[msg.sender] >= _n);
         require(wallet[msg.sender] != 0 , "No money in this contract");
-        payable(msg.sender).transfer(wallet[msg.sender]);
-        wallet[msg.sender] -= wallet[msg.sender];
+        payable(msg.sender).transfer(_n);
+        wallet[msg.sender] -= _n;
     }
 }
 
@@ -198,3 +205,118 @@ contract Q50 {
         return result/10;
     }
 }
+
+contract TOSTRING {
+    function ABCDE(uint _a) public pure returns(string memory) {
+        return Strings.toString(_a);
+    }
+
+    function getNumbers(uint[] memory _numbers) public pure returns(string memory) {
+        string memory _res;
+        for(uint i=0; i<_numbers.length; i++) {
+            _res = string.concat(_res, Strings.toString(_numbers[i]));
+        }
+        return _res;
+    }
+    //getNumbers가 정답임
+
+    function getDigits(uint _num) public pure returns(uint) {
+        uint idx = 1;
+        while(_num > 10) {
+            _num = _num/10;
+            idx++;
+        }
+        return idx;
+    }
+    //어레이 길이 구하는 거임
+
+    function uintToBytes(uint8 _num) public pure returns(bytes1) {
+        return bytes1(_num);
+    }
+
+    function uintToString(uint _num) public pure returns(string memory) {
+        //ascii code
+        uint digits = getDigits(_num);
+        bytes memory _b = new bytes(digits);
+
+        while(_num != 0) {
+            digits--;
+            _b[digits] = bytes1(uint8(48+_num%10));
+            _num /= 10;    
+        }
+
+        return string(_b);
+        
+        //bytes
+
+        //string
+        //uintToString 이 함수가 오픈제플린에서 받은 String.toString()이랑 동일한 역할 하는 함수 직접 만들어본거
+    }
+
+    function FINAL(uint[] memory _num) public pure returns(string memory) {
+        bytes memory _b = new bytes(_num.length);
+        for(uint i=0; i<_num.length;i++) {
+            _b = abi.encodePacked(_b, uintToString(_num[i]));
+        }
+        return string(_b);
+    }
+}
+
+contract TOSTRING2 {
+    // function A(uint _a) public pure returns(string memory) {
+    //     return Strings.toString(_a);
+    // }
+
+    // // string.concat(a,b);
+    // function getNumbers(uint[] memory _numbers) public pure returns(string memory) {
+    //     string memory _res;
+    //     for(uint i=0; i<_numbers.length; i++) {
+    //         _res = string.concat(_res, Strings.toString(_numbers[i]));
+    //     }
+    //     return _res;
+    // }
+
+    function getDigits(uint _num) public pure returns(uint) {
+        uint idx = 1;
+        while(_num >= 10) {
+            _num = _num/10;
+            idx ++;
+        }
+
+        return idx;
+    }
+
+    function uintToBytes(uint8 _num) public pure returns(bytes1) {
+        return bytes1(_num);
+    }
+
+    function uintToString(uint _num) public pure returns(string memory) {
+        uint digits = getDigits(_num);
+        bytes memory _b = new bytes(digits);
+
+        while(_num != 0) {
+            digits--;
+            _b[digits] = bytes1(uint8(48+_num%10));
+            _num /= 10;
+        }
+
+        return string(_b);
+    }
+
+    function FINAL(uint[] memory _num) public pure returns(string memory) {
+        bytes memory _b = new bytes(_num.length);
+        for(uint i=0; i<_num.length; i++) {
+            _b = abi.encodePacked(_b, uintToString(_num[i]));
+        }
+
+        return string(abi.encodePacked(_b));
+    }
+}
+
+//0x30~0x39 0~9를 아스키 코드에 맞게 표현하고 싶다
+//16진수로 바꿔줘야함
+//0은 48되야되고 9는 57로 바꿔야함 10진수로 바꾸면
+//0을 48로 5를 53으로 십진수는 나중에 16진수로 변할거야
+//아스키코드에서 1은 49니까 48을 더해주면 되
+//이거를 Strings쓰지않고 직접 해보자
+//10진수 -> 16진수(아스키코드바뀔준비) -> 바이트 -> 스트링 이런 변환형식 따라야함

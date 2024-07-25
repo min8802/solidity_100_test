@@ -101,6 +101,7 @@ contract Q35 {
         }
         
         uint[] memory Array = new uint[](ArrayNumber);
+        // uint[] memory _numbers = new uint[](numbers.length/2)
 
         for(uint i=1;i<inputArray;i+=2) {
             Array[idx] = _Array[i];
@@ -109,6 +110,8 @@ contract Q35 {
 
         return Array;
     }
+
+
     // function evenArray(uint[] memory _Array) public pure returns(uint[] memory){
     //     uint idx;
     //     uint inputArray = _Array.length;
@@ -149,6 +152,25 @@ contract Q36 {
         }
 
         return a[_a];
+    }
+
+    enum Status {
+        high,
+        neutral,
+        low
+    }
+
+    function setStatus(uint _n) public pure returns(Status) {
+        Status S;
+        if(_n>=7) {
+            S = Status.high;
+        } else if(_n>=4) {
+            S = Status.neutral;
+        } else {
+            S = Status.low;
+        }
+
+        return S;
     }
 }
 
@@ -230,6 +252,11 @@ contract Q39 {
     // 100 : 50,33,20,14  (2의 배수 50개, 3의 배수 33개, 5의 배수 20개, 7의 배수 14개)
     */
 
+    //몫을 구하면 됨
+    function count(uint number) public pure returns(uint,uint,uint,uint) {
+        return (number / 2 ,number / 3 ,number / 5,number / 7);
+    }
+
     function returnDigit(uint _n) public pure returns(uint,uint,uint,uint) {
         uint[] memory Array = new uint[](_n);
         uint idx;
@@ -282,6 +309,7 @@ contract Q40 {
 
         if(ArrayLength % 2 ==0) {
             uint[] memory midnum = new uint[](2);
+            // uint[] memory median = new uint[](2 - ArrayLength % 2); 오 이거있으면 if문 필요없네
             midnum[1] = _Array[(ArrayLength/2)];
             midnum[0] = _Array[(ArrayLength/2)-1];
             return (_Array, midnum);
