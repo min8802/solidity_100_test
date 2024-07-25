@@ -178,5 +178,22 @@ contract Q30 {
         }
         return a;
     }
+
+    function reupdateDescending(uint[] memory _arr) public pure returns(uint[] memory) {
+        uint[] memory a = new uint[](_arr.length);
+        for(uint i = 0; i < _arr.length; i++) {
+            a[i] = _arr[i];
+        }
+
+        for (uint i = 0; i < a.length; i++) {
+            for (uint j = i+1; j < a.length; j++) {
+                if(a[i] < a[j]) {
+                    (a[i], a[j]) = (a[j], a[i]);
+                }
+            }
+        }
+        return a;
+
+    }
             
 }
