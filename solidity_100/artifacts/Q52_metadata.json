@@ -8,33 +8,25 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_birth",
+						"type": "string"
 					}
 				],
-				"name": "setArray",
+				"name": "setId",
 				"outputs": [
 					{
-						"internalType": "uint256[]",
+						"internalType": "bytes10",
 						"name": "",
-						"type": "uint256[]"
+						"type": "bytes10"
 					}
 				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "thirdBigNum",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -51,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/51-60.sol": "Q51"
+			"solidity_100/51-60.sol": "Q52"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

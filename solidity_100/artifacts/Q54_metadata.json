@@ -6,35 +6,28 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "setArray",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "nonpayable",
+				"inputs": [],
+				"name": "donate",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "thirdBigNum",
+				"name": "getBiggestDonate",
 				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -51,7 +44,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/51-60.sol": "Q51"
+			"solidity_100/51-60.sol": "Q54"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

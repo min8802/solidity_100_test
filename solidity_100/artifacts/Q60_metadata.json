@@ -8,33 +8,43 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "setArray",
-				"outputs": [
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
 					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
+						"internalType": "bool",
+						"name": "_bool",
+						"type": "bool"
 					}
 				],
+				"name": "booking",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "thirdBigNum",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_date",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_bool",
+						"type": "bool"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"name": "getBooking",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -51,7 +61,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/51-60.sol": "Q51"
+			"solidity_100/51-60.sol": "Q60"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

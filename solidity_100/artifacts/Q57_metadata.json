@@ -8,17 +8,28 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "_sub_owner",
+						"type": "address"
 					}
 				],
-				"name": "setArray",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
 				"outputs": [
 					{
-						"internalType": "uint256[]",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256[]"
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -26,14 +37,8 @@
 			},
 			{
 				"inputs": [],
-				"name": "thirdBigNum",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
+				"name": "ownerApprove",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -51,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/51-60.sol": "Q51"
+			"solidity_100/51-60.sol": "Q57"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

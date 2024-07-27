@@ -6,27 +6,28 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "getCurrentTIme",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "_n",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "setArray",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTime",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "thirdBigNum",
+				"name": "getTwodaysTime",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -34,7 +35,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -51,7 +52,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/51-60.sol": "Q51"
+			"solidity_100/51-60.sol": "Q59"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
