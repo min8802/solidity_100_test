@@ -8,17 +8,36 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
 					}
 				],
-				"name": "addressToBytes",
+				"name": "digit",
 				"outputs": [
 					{
-						"internalType": "bytes[]",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bytes[]"
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					}
+				],
+				"name": "fifthDigit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "pure",
@@ -38,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/61-70.sol": "Q64"
+			"solidity_100/61-70.sol": "Q66"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

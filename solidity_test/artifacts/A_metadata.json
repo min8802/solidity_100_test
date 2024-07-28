@@ -6,51 +6,119 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_pw",
-						"type": "string"
-					}
-				],
-				"name": "generatePW",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					},
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					},
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "pure",
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "accelCar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes",
-						"name": "_b",
-						"type": "bytes"
-					}
-				],
-				"name": "splitBytes",
+				"inputs": [],
+				"name": "brackCar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCar",
 				"outputs": [
 					{
-						"internalType": "bytes1",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "speed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fuel",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "start",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct a.car",
 						"name": "",
-						"type": "bytes1"
+						"type": "tuple"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getFuel",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startCar",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "speed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fuel",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "start",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct a.car",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stopCar",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "speed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fuel",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "start",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct a.car",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -67,7 +135,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test9.sol": "a"
+			"solidity_test/test7.sol": "a"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -81,12 +149,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test9.sol": {
-			"keccak256": "0x1c6c5c3f3196ba1c253172c0553d997aa60ced6caae49f898d40798c1cbe1da4",
+		"solidity_test/test7.sol": {
+			"keccak256": "0x954d506cb63b4420e24d88dcd8681b2b698be6cd67eb6bffb758d26ae8f43d04",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://51fbed1b27398d83b2d8bae4838fc40d9015427a94b901504cb3e7f4e88ab539",
-				"dweb:/ipfs/QmPW7kgA5gUXDb64JQcf9jfu1ihfrwUNScLDLC3tYyknHu"
+				"bzz-raw://5a283e1edff80fb7cd03e9ff86d176373230b92a10f8488c03085e5dbbf810fd",
+				"dweb:/ipfs/QmWhBZT9nirBhPyFjV8hAW6wrhogK6eMbnwVJw9aEoGy95"
 			]
 		}
 	},

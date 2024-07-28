@@ -8,17 +8,27 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_c",
+						"type": "uint256"
 					}
 				],
-				"name": "addressToBytes",
+				"name": "returnString",
 				"outputs": [
 					{
-						"internalType": "bytes[]",
+						"internalType": "string",
 						"name": "",
-						"type": "bytes[]"
+						"type": "string"
 					}
 				],
 				"stateMutability": "pure",
@@ -38,7 +48,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/61-70.sol": "Q64"
+			"solidity_100/61-70.sol": "Q69"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

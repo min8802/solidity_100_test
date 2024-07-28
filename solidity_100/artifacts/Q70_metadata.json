@@ -6,22 +6,51 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					}
-				],
-				"name": "addressToBytes",
+				"inputs": [],
+				"name": "getC1",
 				"outputs": [
 					{
-						"internalType": "bytes[]",
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "auth",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct Q70.customer",
 						"name": "",
-						"type": "bytes[]"
+						"type": "tuple"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "setAuth",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -38,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/61-70.sol": "Q64"
+			"solidity_100/61-70.sol": "Q70"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

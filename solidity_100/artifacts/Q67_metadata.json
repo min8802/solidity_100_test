@@ -4,27 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_addr",
-						"type": "address"
-					}
-				],
-				"name": "addressToBytes",
-				"outputs": [
-					{
-						"internalType": "bytes[]",
-						"name": "",
-						"type": "bytes[]"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -38,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/61-70.sol": "Q64"
+			"solidity_100/61-70.sol": "Q67"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
