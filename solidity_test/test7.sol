@@ -20,7 +20,7 @@ contract a {
         bool start;
     }
 
-    car Car;
+    car public Car;
     address payable wallet;
 
     constructor () {
@@ -66,6 +66,7 @@ contract a {
     function brackCar() public isStart {
         require(Car.speed > 0, "check speed");
         Car.speed -= 10;
+        Car.fuel -= 10;
     }
 
     //주유 기능 - 주유하는 기능, 주유를 하면 1eth를 지불해야하고 연료는 100이 됨

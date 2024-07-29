@@ -7,56 +7,27 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getlottery",
-				"outputs": [
-					{
-						"internalType": "bytes",
-						"name": "",
-						"type": "bytes"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_a",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_b",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_c",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_d",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "_e",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_f",
-						"type": "string"
-					}
-				],
-				"name": "lottery",
+				"inputs": [],
+				"name": "Car",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "speed",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fuel",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "start",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -64,8 +35,112 @@
 			},
 			{
 				"inputs": [],
-				"name": "setlottery",
+				"name": "accelCar",
 				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "brackCar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCar",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "speed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fuel",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "start",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct a.car",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getFuel",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startCar",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "speed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fuel",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "start",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct a.car",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stopCar",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "speed",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "fuel",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "start",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct a.car",
+						"name": "",
+						"type": "tuple"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -83,7 +158,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test11.sol": "a"
+			"solidity_test/test7.sol": "a"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -97,36 +172,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"@openzeppelin/contracts/utils/Strings.sol": {
-			"keccak256": "0x55f102ea785d8399c0e58d1108e2d289506dde18abc6db1b7f68c1f9f9bc5792",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://6e52e0a7765c943ef14e5bcf11e46e6139fa044be564881378349236bf2e3453",
-				"dweb:/ipfs/QmZEeeXoFPW47amyP35gfzomF9DixqqTEPwzBakv6cZw6i"
-			]
-		},
-		"@openzeppelin/contracts/utils/math/Math.sol": {
-			"keccak256": "0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875",
-				"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L"
-			]
-		},
-		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
-			"keccak256": "0x5f7e4076e175393767754387c962926577f1660dd9b810187b9002407656be72",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://7d533a1c97cd43a57cd9c465f7ee8dd0e39ae93a8fb8ff8e5303a356b081cdcc",
-				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
-			]
-		},
-		"solidity_test/test11.sol": {
-			"keccak256": "0x6118bb57499d1ae6a7e61b68e273e618d5300214dfe4934ddd5956c94b57f458",
+		"solidity_test/test7.sol": {
+			"keccak256": "0xd66f0516aae2065ef1d66763b1147417732c0ceaaa9d152ceb8cbf1546498bba",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cecbb90c3a165412f5f31a109cf3282f437854271b1d628af0bda7fe9e5bf844",
-				"dweb:/ipfs/QmUaY3Vrn5Kb776QxJGLMWbMaYvfqSQj9RJSqzK7G5q1We"
+				"bzz-raw://5b93584a7017fce4828076b721101d58a5569261a6c171c30808cc92fa08b203",
+				"dweb:/ipfs/QmRAJyfJJ94xTxoN92wvEkpDCdNgi7Xidt36RXT7N8Pz9k"
 			]
 		}
 	},

@@ -178,15 +178,27 @@ contract Q76 {
     //10이 넘었을 때를 좀 고민해봐야함
     function uintToString(uint a) public pure returns(string memory) {
         uint count;
-        uint result = a / 10;
+        uint result = a;
+        uint result1 = a;
+        
         
         while(result > 0) {
             count++;
+            result /= 10;
+        }
+
+        bytes memory temp = new bytes(count);
+        for(uint i = 0; i<count;i++) {
+            temp[count-i-1] = bytes1(uint8(0x30+result1%10));
+            result1 /= 10;
         }
         
-        bytes1 res = bytes1(uint8(0x30+a));
-        bytes memory ans = abi.encodePacked(res);
+        bytes memory ans = abi.encodePacked(temp);
         //string() 사용하려면 bytes1이 아닌 bytes 형태로 변경
+
+
+
+
         return string(ans);
     }
 }
@@ -200,4 +212,115 @@ contract Q77 {
     function uintToString(uint a) public pure returns(string memory) {
         return Strings.toString(a);
     }
+}
+
+contract Q78 {
+    /*
+    1. 숫자만 들어갈 수 있는 array를 선언하세요. 
+    array 안 요소들 중 최소 하나는 10~25 사이에 있는지를 알려주는 함수를 구현하세요.
+    
+    예) [1,2,6,9,11,19] -> true (19는 10~25 사이) // [1,9,3,6,2,8,9,39] -> false (어느 숫자도 10~25 사이에 없음)
+    */
+
+    function checkArray(uint[] memory array) public pure returns(bool) {
+        uint[] memory temp = array;
+        for(uint i=0; i<temp.length; i++) {
+            if(temp[i] > 10 && temp[i] <25) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+contract Q79 {
+    /*
+    3개의 숫자를 넣으면 그 중에서 가장 큰 수를 찾아내주는 함수를 Contract A에 구현하세요. Contract B에서는 이름, 번호, 점수를 가진 구조체 학생을 구현하세요. 
+    학생의 정보를 3명 넣되 그 중에서 가장 높은 점수를 가진 학생을 반환하는 함수를 구현하세요. 구현할 때는 Contract A를 import 하여 구현하세요.
+    */
+}
+
+contract A {
+    function bigNum(uint _a, uint _b, uint _c) public pure returns(uint) {
+        uint bgNum = _a > _b ? (_a > _c ? _a : _c) : (_b > _c ? _b : _c);
+        return bgNum;
+    }
+}
+
+contract B {
+
+    A a = new A();
+
+    struct Student {
+        string name;
+        uint number;
+        uint score;
+    }
+
+    Student[] students;
+
+    function setS(string memory _name, uint _score) public {
+        require(students.length < 3,"nope");
+        students.push(Student(_name,students.length,_score));
+    }
+
+    function bestS() public view returns(uint) {
+        uint num1 = students[0].score;
+        uint num2 = students[1].score;
+        uint num3 = students[2].score;
+
+        return a.bigNum(num1,num2,num3);
+    }
+
+    function deleteS() public {
+        delete students;
+    }
+}
+
+contract Q80 {
+    /*
+    지금은 동적 array에 값을 넣으면(push) 가장 앞부터 채워집니다. 1,2,3,4 순으로 넣으면 [1,2,3,4] 이렇게 표현됩니다. 
+    그리고 값을 빼려고 하면(pop) 끝의 숫자부터 빠집니다. 가장 먼저 들어온 것이 가장 마지막에 나갑니다. 이런 것들을FILO(First In Last Out)이라고도 합니다. 
+    가장 먼저 들어온 것을 가장 먼저 나가는 방식을 FIFO(First In First Out)이라고 합니다. push와 pop을 이용하되 FIFO 방식으로 바꾸어 보세요.
+    */
+
+    uint[] public numArray;
+    //1
+    //pop -> push 2 -> push 1
+    //2, 1 -> pop, pop -> push 3, push2, push 1
+    //3,2,1 // 1,2,3 // 0번 2번 바뀜 1번 2번 바뀜
+    //4,3,2,1 // 0번 3번 바뀜 1번 3번 바뀜 2번 3번 바뀜 4 3 2 1
+
+    //2, 1
+    function pushNum(uint a) public returns(uint[] memory){
+        uint[] memory temp = numArray; //4,3
+        uint[] memory temp1 = new uint[](numArray.length+1);
+        if(numArray.length == 0) {
+            numArray.push(a);
+        } else { 
+            for(uint i= 0; i < numArray.length; i++) {
+                numArray.pop();
+            }
+            
+            numArray.push(a); //2
+
+            for(uint i=0; i < numArray.length; i++) {
+                temp1[i] = numArray[i];
+            }
+
+            for(uint i=0; i < temp.length; i++) {
+                temp1[i+1] = temp[i];
+            }
+        }
+        return temp1;
+    }
+
+    function popNum() public {
+        numArray.pop();
+    }
+
+    function getArray() public view returns(uint[] memory) {
+        return numArray;
+    }
+    //80번 못 풀었습니다
 }
