@@ -12,136 +12,41 @@
 			},
 			{
 				"inputs": [],
-				"name": "Car",
+				"name": "payPark",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "speed",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "fuel",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "start",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "accelCar",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "brackCar",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getCar",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "speed",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "fuel",
-								"type": "uint256"
-							},
-							{
-								"internalType": "bool",
-								"name": "start",
-								"type": "bool"
-							}
-						],
-						"internalType": "struct a.car",
 						"name": "",
-						"type": "tuple"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getFuel",
-				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "startCar",
+				"name": "recordTime",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "speed",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "fuel",
-								"type": "uint256"
-							},
-							{
-								"internalType": "bool",
-								"name": "start",
-								"type": "bool"
-							}
-						],
-						"internalType": "struct a.car",
+						"internalType": "uint256",
 						"name": "",
-						"type": "tuple"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "stopCar",
+				"name": "time",
 				"outputs": [
 					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "speed",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "fuel",
-								"type": "uint256"
-							},
-							{
-								"internalType": "bool",
-								"name": "start",
-								"type": "bool"
-							}
-						],
-						"internalType": "struct a.car",
+						"internalType": "uint256",
 						"name": "",
-						"type": "tuple"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -158,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test7.sol": "a"
+			"solidity_test/test12.sol": "A"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -172,12 +77,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test7.sol": {
-			"keccak256": "0xd66f0516aae2065ef1d66763b1147417732c0ceaaa9d152ceb8cbf1546498bba",
+		"solidity_test/test12.sol": {
+			"keccak256": "0x529f3777f6773c808777080708fbd1e5ac695b9b3f6d4d99e262d6f5be28fd80",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5b93584a7017fce4828076b721101d58a5569261a6c171c30808cc92fa08b203",
-				"dweb:/ipfs/QmRAJyfJJ94xTxoN92wvEkpDCdNgi7Xidt36RXT7N8Pz9k"
+				"bzz-raw://58b4f2a24cb758ce73c0f81a47a3b3b62e2815a9122393a08863ff2d2959b031",
+				"dweb:/ipfs/QmWeXpQ6KNd4FYRdbApHAVBrrVz2vpiq2XKzBYyBqhURt7"
 			]
 		}
 	},
