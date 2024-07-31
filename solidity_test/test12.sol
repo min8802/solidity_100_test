@@ -49,5 +49,5 @@ contract A {
 
         return parkedFee;
     }
-
+    //여기서는 fee만 계산하고 돈내는 함수는 따로 작성했어야 해보자
 }

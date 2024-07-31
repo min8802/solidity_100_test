@@ -6,41 +6,22 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "bestS",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "deleteS",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_score",
-						"type": "uint256"
+						"internalType": "uint256[]",
+						"name": "array",
+						"type": "uint256[]"
 					}
 				],
-				"name": "setS",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "checkArray",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -57,7 +38,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/71-80.sol": "B"
+			"solidity_100/71-80.sol": "Q78"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

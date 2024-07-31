@@ -74,3 +74,104 @@ contract a {
     //세금 납부는 유저가 자율적으로 실행. (납부 후에는 납부 해야할 잔여 금액 0으로)
     
 }
+
+contract Bank {
+    struct User {
+        address _addr;
+        uint balance;
+        uint paid; // 시간이어서 uint
+    }
+
+    receive() external payable {} //이 bank컨트랙트는 돈을 받는 경우도 있잖아 ? 그래서 돈받을 준비를 해야되 receive함수로
+
+    constructor(address _addr) {
+        IRS(_addr).pushList(address(this));
+        (bool success,) = address(_addr).call(abi.encodeWithSignature("pushList(address)", address(this)));
+        require(success);
+    } // bank가 만들자마자 bank주소를 IRS에 pushList에 넣어서 바로 은행명당에 이름을 등록함
+
+    mapping(address => User) public users; //public붙이니까 IRS 컨트랙트에서 .users 이렇게 바로 쓸 수 있네?! 오 !
+
+    function getUser(address _addr) public view returns(User memory) {
+        return users[_addr];
+    }
+
+    function signUp() public {
+        users[msg.sender] = User(msg.sender, 0, 0);
+    }
+
+    function deposit() public payable {
+        users[msg.sender].balance += msg.value;
+    }
+
+    function _deposit(address _addr, uint _n) public {
+        users[_addr].balance += _n;
+    }
+
+    function withDraw(uint _n) public {
+        require(users[msg.sender].balance >= _n);
+        users[msg.sender].balance -= _n;
+        payable(msg.sender).transfer(_n);
+    }
+
+    //모든 bank는 돈을 받을 준비를 해야하고 기본적으로 receive가 있어야 한다
+
+    function transfer1(address payable _to, uint _n) public {
+        //상대 은행도 이 함수들을 다 가지고 있어야되
+        //받는 애의 balance도 변경을 시켜줘야되 컨트랙트간 함수들을 건드려야되네
+        require(Bank(_to).getUser(msg.sender)._addr != address(0));
+        //조건
+        users[msg.sender].balance -= _n;
+        payable(_to).transfer(_n);
+        //잔액 변화 2가지
+        Bank(_to)._deposit(msg.sender, _n);//에? 이렇게 컨트랙트 지갑에 .찍고 함수 바로 사용가능 하다고 ? 아니 안되 // 컨트랙트이름 Bank로 감싸주고 _to에 payable을 붙여주니까 에러 사라짐 ㄷㄷ
+        // _to.users[msg.sender].balance += _n; 이거를 하는 함수를 deposit함수로 만들었음
+    }
+
+    //이렇게 하니까 Bank 컨트랙트 2개 간에는 서로 돈을 보내고 받는게 가능하네
+
+    function transfer2(address payable _bank, address _user, uint _n) public {
+        require(Bank(_bank).getUser(_user)._addr != address(0));
+        users[msg.sender].balance -= _n;
+        _bank.transfer(_n);
+        Bank(_bank)._deposit(_user, _n);
+    }
+}
+
+contract IRS {
+    //국세청은 새로운 컨트랙트
+    //만들자 마자 알려주는게 좋은거 같은데?
+
+    address[] BankList; // bank컨트랙트 들의 주소가 들어간다
+
+    function pushList(address _addr) public {
+        BankList.push(_addr);
+    }
+
+    function getList() public view returns(address[] memory) {
+        return BankList;
+    }
+
+    function predict() public view returns(uint) {
+        //은행별 잔고 은행돌면서 물어바 그리고 1%가 예상 세금
+        uint sum;
+
+        for(uint i = 0; i < BankList.length;i++) {
+            sum += Bank(payable(BankList[i])).getUser(msg.sender).balance;
+        }
+        return sum / 100;
+    }
+
+    function payTaxes() public payable{
+        require(msg.value == predict(), "nope");
+
+        for(uint i=0; i<BankList.length; i++) {
+            Bank(payable(BankList[i])).users(msg.sender).paid;//여기서 users상태변수고 함수처럼 사용되고 있어서input인 msg.sender
+        }
+    }
+
+    //얼만큼 갖고 있는지, 냇는지 안냈는지, 냈다 얼마있다 정보들을 IRS가 갖고 있을까 BANK가 갖고 있을까
+    //ABC은행 3개에 걸쳐 세금이 걷힐수도 있어
+    //자발적으로 세금을 내는거 1개 , 추가로 강제적으로 세금을 걷는거 1개
+
+}

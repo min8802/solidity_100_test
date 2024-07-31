@@ -6,8 +6,24 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getBalance",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_c",
+						"type": "uint256"
+					}
+				],
+				"name": "bigNum",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -15,12 +31,8 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -36,7 +48,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/61-70.sol": "A"
+			"solidity_100/71-80.sol": "A"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -74,12 +86,12 @@
 				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
 			]
 		},
-		"solidity_100/61-70.sol": {
-			"keccak256": "0xe70dce6540b9a1ae20753841665842f2edf7471dfc86ac2c24a47286e8f7068f",
+		"solidity_100/71-80.sol": {
+			"keccak256": "0x276891124b205aeb31dec3ee1c96d644b6c1e33a0627a58e1ca68a6d2e6b657e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://7d867487f66625a8c4ab7582fad7752063be69d1ba51a1a5a2f22fe92bfe428e",
-				"dweb:/ipfs/Qmba8ttTEHE59nVydNazhfd7r42kNQwnfKnDUHkdWLP3KK"
+				"bzz-raw://3d99a1ac5cfac874042c12c0437b2db5f6c09afc2410583efa7c4728b4518f5f",
+				"dweb:/ipfs/QmT1jTJo4XC2TzJq55UzikvvyFxnj4ChwktscJQuEy7fNH"
 			]
 		}
 	},

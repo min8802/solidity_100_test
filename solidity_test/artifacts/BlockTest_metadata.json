@@ -6,14 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_pw",
-						"type": "string"
-					}
-				],
-				"name": "generatePW",
+				"inputs": [],
+				"name": "blockNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -21,26 +15,27 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes",
-						"name": "_b",
-						"type": "bytes"
-					}
-				],
-				"name": "splitBytes",
+				"inputs": [],
+				"name": "getBlockNumber",
 				"outputs": [
 					{
-						"internalType": "bytes1",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bytes1"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setBlockNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -57,7 +52,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test9.sol": "TEST9"
+			"solidity_test/test8.sol": "BlockTest"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -71,12 +66,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test9.sol": {
-			"keccak256": "0x1c6c5c3f3196ba1c253172c0553d997aa60ced6caae49f898d40798c1cbe1da4",
+		"solidity_test/test8.sol": {
+			"keccak256": "0x7d2b6785d49ab4cb81a0ef9acaf2e37b9d0ad3feae0279fa363a808a3086f233",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://51fbed1b27398d83b2d8bae4838fc40d9015427a94b901504cb3e7f4e88ab539",
-				"dweb:/ipfs/QmPW7kgA5gUXDb64JQcf9jfu1ihfrwUNScLDLC3tYyknHu"
+				"bzz-raw://8055118c103e0fa9bf33cbbe443704da8d34359381d622cfb6ee0725a6a266da",
+				"dweb:/ipfs/QmVrcLEXEGAMEt99o6C1Uw2L3DYBTg8XUVs7H5zLPf23kJ"
 			]
 		}
 	},

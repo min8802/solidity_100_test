@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidity_100/81-90.sol": "Q82"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidity_100/81-90.sol": {
+			"keccak256": "0x47173c286d3afa67831aaf8b9de2f1bc7be60813e7e26ac82804572dcc765ee1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b22225a2c3a19bd1464ffc0dba5b13059cfdfe4fea7d11ed90d84621d6a22da1",
+				"dweb:/ipfs/QmZLjHMuNfTFjMYKcdDYjCtruaJQpoxArjkLrVqerfV72L"
+			]
+		}
+	},
+	"version": 1
+}

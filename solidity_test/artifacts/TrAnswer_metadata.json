@@ -6,59 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_topicNum",
-						"type": "uint256"
-					}
-				],
-				"name": "getTopic",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "number",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "subject",
-								"type": "string"
-							},
-							{
-								"internalType": "string",
-								"name": "content",
-								"type": "string"
-							},
-							{
-								"internalType": "address",
-								"name": "proposer",
-								"type": "address"
-							},
-							{
-								"internalType": "uint256",
-								"name": "upvote",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "downvote",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct a.topic",
-						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "getTopics",
+				"name": "getMyProposals",
 				"outputs": [
 					{
 						"components": [
@@ -69,7 +18,7 @@
 							},
 							{
 								"internalType": "string",
-								"name": "subject",
+								"name": "title",
 								"type": "string"
 							},
 							{
@@ -84,16 +33,26 @@
 							},
 							{
 								"internalType": "uint256",
-								"name": "upvote",
+								"name": "pros",
 								"type": "uint256"
 							},
 							{
 								"internalType": "uint256",
-								"name": "downvote",
+								"name": "cons",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum TrAnswer.status",
+								"name": "result",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "blockNumber",
 								"type": "uint256"
 							}
 						],
-						"internalType": "struct a.topic[]",
+						"internalType": "struct TrAnswer.Prop[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -105,26 +64,56 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_name",
+						"name": "_title",
 						"type": "string"
 					}
 				],
-				"name": "getUser",
+				"name": "getProposal",
 				"outputs": [
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "number",
+								"type": "uint256"
+							},
+							{
 								"internalType": "string",
-								"name": "name",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "content",
 								"type": "string"
 							},
 							{
 								"internalType": "address",
-								"name": "wallet",
+								"name": "proposer",
 								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pros",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "cons",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum TrAnswer.status",
+								"name": "result",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "blockNumber",
+								"type": "uint256"
 							}
 						],
-						"internalType": "struct a.user",
+						"internalType": "struct TrAnswer.Prop",
 						"name": "",
 						"type": "tuple"
 					}
@@ -136,7 +125,61 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "_subject",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "proposals",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "proposer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pros",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cons",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum TrAnswer.status",
+						"name": "result",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockNumber",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_title",
 						"type": "string"
 					},
 					{
@@ -145,7 +188,20 @@
 						"type": "string"
 					}
 				],
-				"name": "setTopic",
+				"name": "propose",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					}
+				],
+				"name": "setResult",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -158,7 +214,7 @@
 						"type": "string"
 					}
 				],
-				"name": "setUser",
+				"name": "signUp",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -166,22 +222,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_topicNum",
-						"type": "uint256"
-					},
-					{
 						"internalType": "string",
-						"name": "_subject",
+						"name": "_title",
 						"type": "string"
 					},
 					{
 						"internalType": "bool",
-						"name": "_vote",
+						"name": "_isPro",
 						"type": "bool"
 					}
 				],
-				"name": "voting",
+				"name": "vote",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -200,7 +251,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test8.sol": "a"
+			"solidity_test/test8.sol": "TrAnswer"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
