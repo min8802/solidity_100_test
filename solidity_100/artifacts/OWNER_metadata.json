@@ -7,41 +7,20 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "checkBal",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
 				"inputs": [],
-				"name": "deposit",
+				"name": "getOwner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "withDraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -58,7 +37,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/81-90.sol": "Q81"
+			"solidity_100/81-90.sol": "OWNER"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

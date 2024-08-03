@@ -6,29 +6,16 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "checkBal",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_n",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "deposit",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "payable",
+				"name": "removeNum",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -39,7 +26,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "withDraw",
+				"name": "setNum",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -58,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/81-90.sol": "Q81"
+			"solidity_100/91-100.sol": "Q91"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -72,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_100/81-90.sol": {
-			"keccak256": "0x061b0b1dd9d188f71523e55f5916f248e4f297f2d6d3eebb5fc575d6bd3745df",
+		"solidity_100/91-100.sol": {
+			"keccak256": "0xc07d66ff20a1754ba5d466914811b79beeb8a317442cdb745ac7fb9fb080a48d",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3cf5aa759bbf0d55f589773272aa5ca35e317a1e6be9c8b0c805de291f48409a",
-				"dweb:/ipfs/QmUyosvCbAMxDn54tkFPxVPQjA9unUs8RdBu34T2dQrkw7"
+				"bzz-raw://219d10df4f51f03b33e5421ab6bde979588b1e009a9f961841b6de810997020f",
+				"dweb:/ipfs/QmcPPqmnU2pr7DvcZ1EZVzPoFtAbmFeZhNeK6h4LNpwgtP"
 			]
 		}
 	},

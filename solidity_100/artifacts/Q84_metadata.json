@@ -6,8 +6,30 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "checkBal",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_blacklist",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
+						"type": "uint256"
+					}
+				],
+				"name": "mul",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -19,8 +41,19 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "deposit",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
+						"type": "uint256"
+					}
+				],
+				"name": "sub",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -28,20 +61,31 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "payable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_n",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
 						"type": "uint256"
 					}
 				],
-				"name": "withDraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "sum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -58,7 +102,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/81-90.sol": "Q81"
+			"solidity_100/81-90.sol": "Q84"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

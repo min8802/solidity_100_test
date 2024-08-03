@@ -7,7 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "checkBal",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "downvote",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -20,7 +25,14 @@
 			},
 			{
 				"inputs": [],
-				"name": "deposit",
+				"name": "downvoting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upvote",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -28,18 +40,12 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "payable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "withDraw",
+				"inputs": [],
+				"name": "upvoting",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -58,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_100/81-90.sol": "Q81"
+			"solidity_100/81-90.sol": "Q85"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

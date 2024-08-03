@@ -8,17 +8,22 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
 					}
 				],
-				"name": "setNum",
+				"name": "PW",
 				"outputs": [
 					{
-						"internalType": "uint256[]",
+						"internalType": "bytes32",
 						"name": "",
-						"type": "uint256[]"
+						"type": "bytes32"
 					}
 				],
 				"stateMutability": "pure",
@@ -27,58 +32,175 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_n",
-						"type": "uint256"
-					}
-				],
-				"name": "setNum2",
-				"outputs": [
+						"internalType": "string",
+						"name": "_bankName",
+						"type": "string"
+					},
 					{
-						"internalType": "uint256[4]",
-						"name": "",
-						"type": "uint256[4]"
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
 					}
 				],
-				"stateMutability": "pure",
+				"name": "deposiBank",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_bankName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
+					}
+				],
+				"name": "getUserCheck",
+				"outputs": [
+					{
 						"internalType": "uint256",
-						"name": "_n",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "setNum2Sum",
-				"outputs": [
-					{
-						"internalType": "uint256[4]",
-						"name": "",
-						"type": "uint256[4]"
-					}
-				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_bankNameA",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bankNameB",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
 						"name": "_n",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
 					}
 				],
-				"name": "setNumSum",
-				"outputs": [
+				"name": "sendMoneyBtoB",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_bankNameA",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bankNameB",
+						"type": "string"
+					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_n",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_receiver",
+						"type": "address"
 					}
 				],
-				"stateMutability": "pure",
+				"name": "sendMoneyUtoU",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_bankName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
+					}
+				],
+				"name": "setUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_bankName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_phoneNum",
+						"type": "string"
+					}
+				],
+				"name": "withdrawBank",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -95,7 +217,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"solidity_test/test13.sol": "A"
+			"solidity_test/test_10.sol": "a"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -109,12 +231,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"solidity_test/test13.sol": {
-			"keccak256": "0x8cb04cdf4cfd4473e05e3f4eb641450eff3810c5b652b36f212f222756f00a01",
+		"solidity_test/test_10.sol": {
+			"keccak256": "0xe0847dacd5d4fae98630827663d42f4685426bbf3ab17aeacf9805ed8a739f43",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5c8b061c58d179ff5014f9b33bd89033414223710dc4b1460580124b7869270b",
-				"dweb:/ipfs/QmTFJLpvVp2Pj38HJpRcB2qVDnB3WtYxfGuj43CwvR2siL"
+				"bzz-raw://347d9239dbb461824be9fb566205e50bb142b3651a3657542fae96bd428855a3",
+				"dweb:/ipfs/QmSFWiTGaVQhZc5mtbddB8BJSCXeTiuANLatLQrjnPpXeF"
 			]
 		}
 	},

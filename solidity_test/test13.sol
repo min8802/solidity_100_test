@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0
+remixd -s . --remix-ide https://remix.ethereum.org// SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.8.2 < 0.9.0;
 

@@ -136,6 +136,10 @@ contract Bank {
         _bank.transfer(_n);
         Bank(_bank)._deposit(_user, _n);
     }
+
+    function setTime(address _addr, uint _n) public {
+        users[_addr].paid = _n;
+    }
 }
 
 contract IRS {
@@ -165,8 +169,24 @@ contract IRS {
     function payTaxes() public payable{
         require(msg.value == predict(), "nope");
 
+        uint c;
+
         for(uint i=0; i<BankList.length; i++) {
-            Bank(payable(BankList[i])).users(msg.sender).paid;//여기서 users상태변수고 함수처럼 사용되고 있어서input인 msg.sender
+            (, , c) = Bank(payable(BankList[i])).users(msg.sender);//여기서 users상태변수고 함수처럼 사용되고 있어서input인 msg.sender
+            if(c != 0) {
+                break;
+            }
+            //c는 paid임
+        }
+        
+        require(c + 7 days <= block.timestamp);
+        require(msg.value == predict(), "nope_tax");
+
+        //timestamp 찍는 코드만 추가 되면 되
+
+        for(uint i=0; i<BankList.length; i++) {
+            아래 코드만 나중에 강사님꺼 보고 비교 혹은 내가 수정하기
+            // BankList[i].users(msg.sender).paid = Bank(setTime(msg.sender, block.timestamp));
         }
     }
 

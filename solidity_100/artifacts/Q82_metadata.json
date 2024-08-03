@@ -6,10 +6,32 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "deposit",
-				"outputs": [],
-				"stateMutability": "payable",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_n",
+						"type": "uint256"
+					}
+				],
+				"name": "getMultipleNum",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			}
 		],
@@ -41,11 +63,11 @@
 	},
 	"sources": {
 		"solidity_100/81-90.sol": {
-			"keccak256": "0x47173c286d3afa67831aaf8b9de2f1bc7be60813e7e26ac82804572dcc765ee1",
+			"keccak256": "0x061b0b1dd9d188f71523e55f5916f248e4f297f2d6d3eebb5fc575d6bd3745df",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b22225a2c3a19bd1464ffc0dba5b13059cfdfe4fea7d11ed90d84621d6a22da1",
-				"dweb:/ipfs/QmZLjHMuNfTFjMYKcdDYjCtruaJQpoxArjkLrVqerfV72L"
+				"bzz-raw://3cf5aa759bbf0d55f589773272aa5ca35e317a1e6be9c8b0c805de291f48409a",
+				"dweb:/ipfs/QmUyosvCbAMxDn54tkFPxVPQjA9unUs8RdBu34T2dQrkw7"
 			]
 		}
 	},
